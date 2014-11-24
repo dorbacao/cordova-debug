@@ -1,0 +1,13 @@
+Ext.define('WmsMobile.store.TreeMenu',{
+	extend:'Ext.data.TreeStore',
+	requires:[
+		'WmsMobile.model.Menu'
+	],
+	config:{
+		model:'WmsMobile.model.ListItem',
+		storeId:'menuHomeStore',
+		autoLoad:true,
+		defaultRootProperty:'items',
+		root:Ext.create('WmsMobile.model.Menu')
+	},
+});
